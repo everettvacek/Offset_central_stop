@@ -1,6 +1,6 @@
 import numpy as np
 from skimage.transform import rescale, SimilarityTransform, warp
-from skimage.morphology import disk, square
+from skimage.morphology import disk
 
 def add_center_stop(array, r, shift = 0):
     # if r<1 use it as percentage of maximum dimension
