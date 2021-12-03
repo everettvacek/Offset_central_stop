@@ -19,7 +19,7 @@ def add_center_stop(array, b, shift = 0):
     array[center_stop.astype(bool)] = 0
     return array
 
-def create_aperture(aperture_radius, array_size, downscale_factor, b = 0, shift = 0):
+def create_aperture(aperture_radius, array_size, downscale_factor, b = 0, shift_percent = 0):
     '''
     aperture_radius: final aperture radius in pixels (after downscaling).
     array_size: size of final array after embedding downscaled aperture array.
@@ -29,6 +29,7 @@ def create_aperture(aperture_radius, array_size, downscale_factor, b = 0, shift 
     '''
     # Creat edge smoothed aperture via rescaling high res aperture.
     aperture = disk(int(aperture_radius*downscale_factor), dtype='double')
+    shift = shift_percent*downscale_factor*aperture_radius
     if b != 0:
         # add central stop
         aperture = add_center_stop(aperture, b=b, shift = shift)
