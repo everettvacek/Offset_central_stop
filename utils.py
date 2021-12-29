@@ -47,7 +47,7 @@ def psf(v, b = None):
     v: (i.e. nu) 1-D array for domain of the psf.
     b: fractional radius of central stop.
     '''
-    if b is None or b is 0:
+    if b is None or b == 0:
         # psf of circular aperture
         return (2*jv(1,v)/v)**2
     else:
