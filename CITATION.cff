@@ -3,6 +3,8 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Vacek"
   given-names: "Everett"
+- family-names: "Preissner"
+  given-names: "Curt"
 - family-names: "Jacobsen"
   given-names: "Chris"
 title: "Offset central stop"
